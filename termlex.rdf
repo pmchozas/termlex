@@ -19,8 +19,8 @@
 	<dc:contributor xml:lang="en">Thierry Declerck</dc:contributor>
 	<dc:contributor xml:lang="en">Elena Montiel-Ponsoda</dc:contributor>
 	<dc:contributor xml:lang="en">Víctor Rodríguez-Doncel</dc:contributor>
-	<cc:licence rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-	<dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+	<cc:licence rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+	<dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://termlex.oeg.fi.upm.es/termlex#Definition">
