@@ -1,0 +1,158 @@
+<https://termlex.oeg.fi.upm.es/termlex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://termlex.oeg.fi.upm.es/termlex> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<https://termlex.oeg.fi.upm.es/termlex> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/lemon/ontolex> .
+<https://termlex.oeg.fi.upm.es/termlex> <http://creativecommons.org/ns#licence> <https://creativecommons.org/licenses/by/4.0/> .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/elements/1.1/contributor> "Elena Montiel-Ponsoda"@en .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/elements/1.1/contributor> "Patricia Martín-Chozas"@en .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/elements/1.1/contributor> "Thierry Declerck"@en .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/elements/1.1/contributor> "Víctor Rodríguez-Doncel"@en .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/elements/1.1/title> "Termlex Extension for Terminologies"@en .
+<https://termlex.oeg.fi.upm.es/termlex> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://termlex.oeg.fi.upm.es/termlex#concept
+<https://termlex.oeg.fi.upm.es/termlex#concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#concept> <http://www.w3.org/2002/07/owl#inverseOf> <https://termlex.oeg.fi.upm.es/termlex#isConceptOf> .
+<https://termlex.oeg.fi.upm.es/termlex#concept> <http://www.w3.org/2000/01/rdf-schema#range> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#concept> <http://www.w3.org/2000/01/rdf-schema#comment> "The concept property relates an ontological entity to a terminological concept that represents the corresponding meaning."@en .
+<https://termlex.oeg.fi.upm.es/termlex#concept> <http://www.w3.org/2000/01/rdf-schema#label> "concept"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#evokes
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/2002/07/owl#inverseOf> <https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> .
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> .
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/2000/01/rdf-schema#range> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/2000/01/rdf-schema#comment> "The evokes property relates a lexical entry to the terminological concepts it evokes."@en .
+<https://termlex.oeg.fi.upm.es/termlex#evokes> <http://www.w3.org/2000/01/rdf-schema#label> "evokes"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#isConceptOf
+<https://termlex.oeg.fi.upm.es/termlex#isConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#isConceptOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#isConceptOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The isConceptOf property relates the meaning of a Terminological Concept by linking it to a particular ontological meaning."@en .
+<https://termlex.oeg.fi.upm.es/termlex#isConceptOf> <http://www.w3.org/2000/01/rdf-schema#label> "is concept of"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#isEvokedBy
+<https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> .
+<https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The isEvokedBy property relates a terminological concept to one of the lexical entries that evoke it."@en .
+<https://termlex.oeg.fi.upm.es/termlex#isEvokedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is evoked by"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/lemon/ontolex#LexicalSense> .
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The isLexicalizedSense property relates a lexical sense to a unique corresponding terminological concept."@en .
+<https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "is lexicalized sense of"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/2002/07/owl#inverseOf> <https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf> .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/lemon/ontolex#LexicalSense> .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/2000/01/rdf-schema#comment> "The lexicalizedSense property relates a terminological concept to a unique corresponding lexical sense."@en .
+<https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense> <http://www.w3.org/2000/01/rdf-schema#label> "lexicalized sense"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#reliabilityCode
+<https://termlex.oeg.fi.upm.es/termlex#reliabilityCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://termlex.oeg.fi.upm.es/termlex#reliabilityCode> <http://www.w3.org/2000/01/rdf-schema#range> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+<https://termlex.oeg.fi.upm.es/termlex#reliabilityCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The reliabilityCode property relates a lexical sense to the the reliability code class."@en .
+<https://termlex.oeg.fi.upm.es/termlex#reliabilityCode> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability Code"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://termlex.oeg.fi.upm.es/termlex#Definition
+<https://termlex.oeg.fi.upm.es/termlex#Definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#Definition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#Definition> <http://www.w3.org/2000/01/rdf-schema#comment> "The Definition class represents the description of a resource, may it be a concept, a term or any other entity. Additional information can be attached to it, such as the source and authorship of the definition."@en .
+<https://termlex.oeg.fi.upm.es/termlex#Definition> <http://www.w3.org/2000/01/rdf-schema#label> "Definition"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#Note
+<https://termlex.oeg.fi.upm.es/termlex#Note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#Note> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#Note> <http://www.w3.org/2000/01/rdf-schema#comment> "The Note class represents additional information given about a resource, may it be a concept, a term or any other entity. Oher data can be attached to it, such as the source and authorship of the note."@en .
+<https://termlex.oeg.fi.upm.es/termlex#Note> <http://www.w3.org/2000/01/rdf-schema#label> "Note"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode
+<https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The ReliabilityCode class represents the trustworthiness degree of a determined resource, may it be a concept, a term or any other entity. This class points at a fixed set of values, from 1 to 5, for standardisation purposes.\n"@en .
+<https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability Code"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#Source
+<https://termlex.oeg.fi.upm.es/termlex#Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#Source> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#Source> <http://www.w3.org/2000/01/rdf-schema#comment> "The Source class represents the provenance information of an element, may it be the authorship, notes or other sources."@en .
+<https://termlex.oeg.fi.upm.es/termlex#Source> <http://www.w3.org/2000/01/rdf-schema#label> "Source"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept
+<https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "The TerminologicalConcept class represents a mental abstraction, concept or unit of thought that embodies the meaning of one or more lexical entries, that refer to the same lexical sense, thus, belong to the same area of epertise."@en .
+<https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Terminological Concept"@en .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#Usage
+<https://termlex.oeg.fi.upm.es/termlex#Usage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://termlex.oeg.fi.upm.es/termlex#Usage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://termlex.oeg.fi.upm.es/termlex#Usage> <http://www.w3.org/2000/01/rdf-schema#comment> "The Usage class represents usage notes, advices or indications regarding the lexical sense of a given terminological concept. "@en .
+<https://termlex.oeg.fi.upm.es/termlex#Usage> <http://www.w3.org/2000/01/rdf-schema#label> "Usage"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://termlex.oeg.fi.upm.es/termlex#1
+<https://termlex.oeg.fi.upm.es/termlex#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://termlex.oeg.fi.upm.es/termlex#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#2
+<https://termlex.oeg.fi.upm.es/termlex#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://termlex.oeg.fi.upm.es/termlex#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#3
+<https://termlex.oeg.fi.upm.es/termlex#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://termlex.oeg.fi.upm.es/termlex#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#4
+<https://termlex.oeg.fi.upm.es/termlex#4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://termlex.oeg.fi.upm.es/termlex#4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+# 
+# https://termlex.oeg.fi.upm.es/termlex#5
+<https://termlex.oeg.fi.upm.es/termlex#5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://termlex.oeg.fi.upm.es/termlex#5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

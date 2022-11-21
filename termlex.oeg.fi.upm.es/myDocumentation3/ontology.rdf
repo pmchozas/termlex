@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://termlex.oeg.fi.upm.es/termlex#"
+     xml:base="https://termlex.oeg.fi.upm.es/termlex"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://termlex.oeg.fi.upm.es/termlex">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <ns1:licence rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:contributor xml:lang="en">Elena Montiel-Ponsoda</dc:contributor>
+        <dc:contributor xml:lang="en">Patricia Martín-Chozas</dc:contributor>
+        <dc:contributor xml:lang="en">Thierry Declerck</dc:contributor>
+        <dc:contributor xml:lang="en">Víctor Rodríguez-Doncel</dc:contributor>
+        <dc:title xml:lang="en">Termlex Extension for Terminologies</dc:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#concept -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#concept">
+        <owl:inverseOf rdf:resource="https://termlex.oeg.fi.upm.es/termlex#isConceptOf"/>
+        <rdfs:range rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:comment xml:lang="en">The concept property relates an ontological entity to a terminological concept that represents the corresponding meaning.</rdfs:comment>
+        <rdfs:label xml:lang="en">concept</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#evokes -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#evokes">
+        <owl:inverseOf rdf:resource="https://termlex.oeg.fi.upm.es/termlex#isEvokedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <rdfs:range rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:comment xml:lang="en">The evokes property relates a lexical entry to the terminological concepts it evokes.</rdfs:comment>
+        <rdfs:label xml:lang="en">evokes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#isConceptOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#isConceptOf">
+        <rdfs:domain rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:comment xml:lang="en">The isConceptOf property relates the meaning of a Terminological Concept by linking it to a particular ontological meaning.</rdfs:comment>
+        <rdfs:label xml:lang="en">is concept of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#isEvokedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#isEvokedBy">
+        <rdfs:domain rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <rdfs:comment xml:lang="en">The isEvokedBy property relates a terminological concept to one of the lexical entries that evoke it.</rdfs:comment>
+        <rdfs:label xml:lang="en">is evoked by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <rdfs:range rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:comment xml:lang="en">The isLexicalizedSense property relates a lexical sense to a unique corresponding terminological concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">is lexicalized sense of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#lexicalizedSense">
+        <owl:inverseOf rdf:resource="https://termlex.oeg.fi.upm.es/termlex#isLexicalizedSenseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <rdfs:comment xml:lang="en">The lexicalizedSense property relates a terminological concept to a unique corresponding lexical sense.</rdfs:comment>
+        <rdfs:label xml:lang="en">lexicalized sense</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#reliabilityCode -->
+
+
+    <owl:ObjectProperty rdf:about="https://termlex.oeg.fi.upm.es/termlex#reliabilityCode">
+        <rdfs:range rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+        <rdfs:comment xml:lang="en">The reliabilityCode property relates a lexical sense to the the reliability code class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability Code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#Definition -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#Definition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The Definition class represents the description of a resource, may it be a concept, a term or any other entity. Additional information can be attached to it, such as the source and authorship of the definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#Note -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#Note">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The Note class represents additional information given about a resource, may it be a concept, a term or any other entity. Oher data can be attached to it, such as the source and authorship of the note.</rdfs:comment>
+        <rdfs:label xml:lang="en">Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The ReliabilityCode class represents the trustworthiness degree of a determined resource, may it be a concept, a term or any other entity. This class points at a fixed set of values, from 1 to 5, for standardisation purposes.
+</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#Source -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#Source">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The Source class represents the provenance information of an element, may it be the authorship, notes or other sources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#TerminologicalConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The TerminologicalConcept class represents a mental abstraction, concept or unit of thought that embodies the meaning of one or more lexical entries, that refer to the same lexical sense, thus, belong to the same area of epertise.</rdfs:comment>
+        <rdfs:label xml:lang="en">Terminological Concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#Usage -->
+
+
+    <owl:Class rdf:about="https://termlex.oeg.fi.upm.es/termlex#Usage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The Usage class represents usage notes, advices or indications regarding the lexical sense of a given terminological concept. </rdfs:comment>
+        <rdfs:label xml:lang="en">Usage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://termlex.oeg.fi.upm.es/termlex#1">
+        <rdf:type rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://termlex.oeg.fi.upm.es/termlex#2">
+        <rdf:type rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://termlex.oeg.fi.upm.es/termlex#3">
+        <rdf:type rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#4 -->
+
+
+    <owl:NamedIndividual rdf:about="https://termlex.oeg.fi.upm.es/termlex#4">
+        <rdf:type rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://termlex.oeg.fi.upm.es/termlex#5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://termlex.oeg.fi.upm.es/termlex#5">
+        <rdf:type rdf:resource="https://termlex.oeg.fi.upm.es/termlex#ReliabilityCode"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

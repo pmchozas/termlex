@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">  <!-- para dispositivos móviles !-->
+    <title>Termlex</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        <link rel= "stylesheet" type= "text/css" href= "static/reset.css">
+        <link rel= "stylesheet" type= "text/css" href= "static/style.css">
+        <link rel= "stylesheet" type= "text/css" href= "static/fontello.css">
+
+</head>
+<body>
+<header class="page-header">
+    <div class="header__wrapper clearfix">
+        <h1 class="logo" >Termlex <a href="index.html"></a> <img src="static/termlex_logo.png" class="logo"></h1>
+                         <!--<h2 class="menu__title"><a href="javascript:void(0);" onclick="myFunction()">☰</a></h2>!-->
+            <h2 class="subtitle">An Extension to Represent Terminologies in the Semantic Web</h2>
+
+            <ul id="navbar" class="menu__list">
+                <li><a href="#about" class="header-menu__item">About Termlex</a></li>
+                <li><a href="myDocumentation3/index-en.html" target="_blank" class="header-menu__item">Documentation</a></li>
+                <li><a href="#sparql" class="header-menu__item">Use Cases</a></li>
+                <li><a href="myDocumentation3/OOPSevaluation/oopsEval.html" target="_blank" class="header-menu__item">Evaluation</a></li>
+                <li><a href="static/termlex.rdf" class="header-menu__item" target="_blank">Download Termlex</a></li>
+                
+                
+                <!--<li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>!-->
+                <!--<li><a href="#blog-section" class="nav-link">Blog</a></li>!-->
+                <!--<li><a href="javascript:void(0)" class="header-menu__item">Contact</a></li>!-->
+            </ul>
+    </div>
+</header>
+
+<main class="intro">
+
+	<!-- INTRO !-->
+	
+
+    
+    <!--DEMO!-->
+    <section id="about" class="intro-services clearfix">
+        <div class="intro-services__wrapper ">
+
+        <h3 class="intro__title">About Termlex</h3>
+        <div class="intro__text">
+
+
+
+                <p>Termlex is devised as an extension of the Ontolex vocabulary to model different types of terminological resources.</p>
+
+                
+               <p class="arch"><img src="static/termlex_core_legend.png" class="termlex"></p>
+
+               
+        </div>
+        </div> 
+    
+    </section>
+
+    <section id="sparql" class="sparql">
+        <div class="intro-services__wrapper ">
+        <h3 class="about__title">Use Cases</h3>
+        <div class="about__text">
+        <p>We have tested Termlex through a series of three use cases:</p>
+        <h4 class="usecases">Simple Resources</h4>
+
+        <p class="arch"><img src="static/simple.png" class="termlex"></p>
+
+        <h4 class="usecases">Complex Resources</h4>
+
+        <p class="arch"><img src="static/complex.png" class="termlex"></p>
+
+        <h4 class="usecases">Automatically Generated Resources</h4>
+
+        <p class="arch"><img src="static/automatic.png" class="termlex"></p>
+
+
+        </div>
+        </div>
+    </section>
+
+    <section id="thanks" class="thanks">
+        <div class="intro-services__wrapper ">
+        <h3 class="contact__title">Contact</h3>
+        <div class="contact__text">
+        <p>This work has been developed by <a href="https://oeg.fi.upm.es/" class="oegweb" target="_blank">Ontology Engineering Group</a> (Universidad Politécnica de Madrid) as part of the PhD. thesis of Patricia Martín-Chozas. For more information, send an email to pmchozas@fi.upm.es</p>
+        <p>This service is being developed within Prêt-à-Llod H2020 project (grant agreement No. 825182)</p>
+        <p>Code is availabe at <a href="https://github.com/Pret-a-LLOD/termitup" class="oegweb" target="_blank">Prêt-à-Llod Github repository</a>.</p>
+        </div>
+        </div>
+    </section>
+
+
+<!--CONTACTO!
+
+    <section class="intro-contact">
+        <h3 class="intro-contact__title"><a href="" target="_blank">Acknowledgements</a></h3>
+
+
+    </section>-->
+
+</main>
+<!-- Menú footer!-->
+<footer class="page-footer clearfix">
+        
+        <div class="footer-wrapper"> <!-- este div yo creo que no lo necesito !-->
+            <nav class="footer-menu clearfix">
+            <img src="../static/images/logopal.png" class="logo2">
+            <img src="../static/images/Logo_OEG.gif" class="logo3">
+            <img src="../static/images/fi.jpg" class="logo4">
+            <img src="../static/images/upm.jpg" class="logo5">
+            </nav>
+            <!--<a href="#" class="icon-search">Buscador</a> !-->
+        </div>
+        
+</footer>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
+
